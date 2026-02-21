@@ -81,3 +81,21 @@ res = not x > y
 print(res) # False
 
 print("=" * 15)
+
+x = 10 
+y = 1
+z = 5.5
+res = (x > y) and (z == y)
+
+print(res) # False
+
+print("=" * 15)
+
+x= 10
+y = 1
+z = 5.5
+res = x > y or not z == y and y != y + z / x
+
+print(res) # True
+
+print("=" * 30)

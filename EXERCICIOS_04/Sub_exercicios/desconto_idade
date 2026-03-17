@@ -1,0 +1,34 @@
+total_pessoas = 0
+total_dinheiro = 0
+soma_idades = 0
+
+while True:
+    idade = int(input("Digite sua idade (0 para sair): "))
+
+    if idade == 0:
+        break
+
+    # Definição do preço conforme a idade
+    if idade < 3:
+        preco = 0
+    elif idade <= 12:
+        preco = 15
+    else:
+        preco = 30
+
+    print(f"O preço do ingresso é R$ {preco}")
+
+    # Atualiza estatísticas
+    total_pessoas += 1
+    total_dinheiro += preco
+    soma_idades += idade
+
+# Após encerrar o laço
+if total_pessoas > 0:
+    media_idade = soma_idades / total_pessoas
+    print("\nResumo da sessão:")
+    print(f"Total de pessoas: {total_pessoas}")
+    print(f"Total arrecadado: R$ {total_dinheiro}")
+    print(f"Média de idade: {media_idade:.2f} anos")
+else:
+    print("Nenhum ingresso foi vendido.")
